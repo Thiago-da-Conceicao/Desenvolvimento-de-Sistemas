@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+body {
+    background-color: blue;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: white;
+    border-bottom: 3px solid white;
+    width: 200px;
+}
+
+h2 {
+    color: black;
+}
+
+p {
+    text-align: justify;
+    color: aliceblue;
+}
+
+a{
+    color: aliceblue;
+}
