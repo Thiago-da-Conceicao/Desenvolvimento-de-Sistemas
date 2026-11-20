@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* position: static (padrão): O body flui normalmente pelo documento, 
+       mas recebe um espaçamento para acomodar o cabeçalho fixo. */
+    padding-top: 60px;
+    background-color: aliceblue;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* HEADER: position: fixed
+   O elemento é retirado do fluxo normal da página e fixado 
+   em relação à janela do navegador (viewport). Mesmo com a rolagem, ele fica grudado no topo. */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: aqua;
+    color: blue;
+    text-align: center;
+    padding: 15px;
+    font-size: 22px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+/* SIDEBAR: position: fixed
+   Também usa position: fixed para se manter grudada na lateral esquerda 
+   da tela, acompanhando a rolagem da página junto com o header. */
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 60px);
+    background-color: black;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+.sidebar ul li:hover {
+    background-color: #555;
+}
+
+/* CONTENT: position: static (padrão)
+   Mantém o fluxo normal, mas possui uma margem à esquerda 
+   para não ficar por baixo da barra lateral (.sidebar). */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* SECTION: position: relative 
+   Usado aqui como referência para futuros elementos absolutos internos, 
+   caso necessário, mantendo o bloco no fluxo normal da página. */
+.section {
+    position: relative;
+    margin-bottom: 50px;
+    height: 90vh;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* SECTION-TITLE: position: sticky
+   Comportamento híbrido: o título age como position: static 
+   até que a rolagem da página atinja o valor de 'top: 60px'. 
+   A partir desse ponto, ele "gruda" no topo da seção enquanto o usuário continua rolando o conteúdo dela. */
+.section-title {
+    position: sticky;
+    top: 60px;
+    background-color: #fff;
+    padding: 15px;
+    font-weight: bold;
+    border-bottom: 3px solid black;
+    z-index: 900;
+}
+
+.section p {
+    margin-top: 3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* BTN-FLOAT: position: fixed
+   Retirado do fluxo normal e posicionado em coordenadas fixas 
+   em relação à tela (bottom: 20px, right: 20px), garantindo que fique 
+   sempre visível no canto inferior direito, flutuando sobre o conteúdo. */
+.btn-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 18px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.btn-float a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

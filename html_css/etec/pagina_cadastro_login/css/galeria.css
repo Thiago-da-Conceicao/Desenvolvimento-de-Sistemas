@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 1140px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../imagens/ImagemFundo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.header {
+    width: 1140px;
+    height: 70px;
+    display: flex;
+    margin: auto;
+    margin-bottom: 15px;
+    background-color: rgb(228, 77, 38);
+
+}
+
+.logo img {
+    height: 100%;
+    margin: 0 0 0 5px;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.links {
+    display: flex;
+    list-style: none;
+
+}
+
+.links li {
+    padding: 5px;
+}
+
+.links li a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.login {
+    display: flex;
+    list-style: none;
+    margin: 0 15px;
+}
+
+.login li {
+    padding: 5px;
+}
+
+.login li a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.galeria {
+    width: 800px;
+    background-color: rgb(240, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 380px;
+    margin: 10px 10px 10px 10px;
+}
+
+figure img {
+    width: 100%;
+}
+
+figcaption {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+
+figcaption h2 {
+    margin-bottom: 12px;
+}
+
+.button {
+    margin-top: 25px;
+    padding: 10px;
+    background-color: rgb(228, 77, 38);
+    color: aliceblue;
+    border: none;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.tutoriais {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 320px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.tutoriais h2 {
+    background-color: aliceblue;
+    width: 100%;
+    padding: 7px;
+    border: 2px solid rgba(0, 0, 0, 0.303);
+    color: rgba(0, 0, 0, 0.685);
+    margin-bottom: 15px;
+}
+
+.tutorial li {
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, 0.859);
+    margin: 2px;
+    list-style: none;
+}
+
+.tutorial a {
+    display: flex;
+}
+
+.tutorial img {
+    width: 47%;
+    height: 100px;
+}
+.tutorial p {
+    padding: 10px;
+}
+
+.publicidade {
+    width: 320px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.publicidade h2 {
+    background-color: aliceblue;
+    width: 100%;
+    padding: 7px;
+    border: 2px solid rgba(0, 0, 0, 0.303);
+    color: rgba(0, 0, 0, 0.685);
+    margin-bottom: 15px;
+    margin-top: 40px;
+}
+
+.propaganda ul {
+background-color: aliceblue;
+padding: 5px;
+}
+
+.publicidade li {
+    margin: 2px;
+    list-style: none;
+}
+
+.publicidade img {
+width: 100%;
+}

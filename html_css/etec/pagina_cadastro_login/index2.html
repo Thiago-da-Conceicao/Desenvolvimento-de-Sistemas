@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="shortcut icon" href="icons/icon.png">
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="#"><img src="imagens/Logo.png" alt="Craftsy"></a>
+    </div>
+    <nav>
+      <ul class="links">
+        <li><a href="index.html">SMARTPHONES</a></li>
+        <li><a href="index.html">TABLETS</a></li>
+        <li><a href="index.html">COMPUTADORES</a></li>
+      </ul>
+      <ul class="login">
+        <li><a href="index3.html">LOGIN</a></li>
+        <li><a href="index2.html">REGISTRAR</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <form action="#">
+      <h2>REGISTRAR</h2>
+
+      <div class="nome">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome aqui" required>
+        <span class="erro">Obrigatório.</span>
+      </div>
+
+
+      <div class="email">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="email@email.com" required>
+        <span class="erro">Obrigatório.</span>
+      </div>
+
+
+      <div class="senha">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" placeholder="senha" required>
+        <span class="erro">Obrigatório.</span>
+      </div>
+
+
+      <div class="pais">
+        <label for="pais">País de nascimento</label>
+        <select id="pais" name="pais" required>
+          <option value="Chile">Chile</option>
+          <option value="Brasil">Brasil</option>
+          <option value="EUA">EUA</option>
+          <option value="Canada">Canáda</option>
+        </select>
+        <span class="erro">Obrigatório.</span>
+      </div>
+
+
+      <fieldset class="genero">
+        <legend>Gênero</legend>
+        <label><input type="radio" name="genero" value="masculino"> Masculino</label>
+        <label><input type="radio" name="genero" value="feminino"> Femenino</label>
+        <label><input type="radio" name="genero" value="prefiro_nao_dizer"> Prefiro não dizer</label>
+      </fieldset>
+
+
+      <fieldset class="hobbies">
+        <legend>Hobbies</legend>
+        <label><input type="checkbox" name="hobbies[]" value="guitarra"> Guitarra</label>
+        <label><input type="checkbox" name="hobbies[]" value="futebol"> Futebol</label>
+        <label><input type="checkbox" name="hobbies[]" value="tenis"> Tenis</label>
+        <label><input type="checkbox" name="hobbies[]" value="programacao"> Programacao</label>
+      </fieldset>
+
+
+      <div class="comentarios">
+        <label for="comentarios">Comentários</label>
+        <textarea id="comentarios" name="comentarios"></textarea>
+      </div>
+
+
+      <div class="termo">
+        <label>
+          <input type="checkbox" name="termos" required> Aceito os termos e condições.
+        </label>
+      </div>
+
+      <div class="registrar">
+        <button type="submit">Registrar</button>
+        <button type="reset">Cancelar</button>
+      </div>
+    </form>
+  </main>
+
+</body>
+
+</html>

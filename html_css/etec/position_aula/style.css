@@ -1,0 +1,100 @@
+/* Reseta margens, preenchimentos e define o modelo de caixa para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.5rem;
+    background-color: black;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 2rem;
+    padding-top: 100px;
+    height: 400vh; /* Altura grande para permitir a rolagem da página e testar position fixed/sticky */
+}
+
+.container {
+    background-color: gray;
+    padding: 20px;
+    border-radius: 15px;
+    
+    /* POSITION RELATIVE: 
+       Define este elemento como o "pai de referência" para elementos filhos 
+       que possuam position absolute. Ele permanece no fluxo normal da página. */
+    position: relative;
+    
+    height: 400px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.absolute {
+    width: 90%;
+    padding: 15px;
+    border: 1px solid white;
+    background-color: rgb(87, 25, 222);
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* POSITION ABSOLUTE: 
+       Retira o elemento do fluxo normal da página e o posiciona 
+       com base no elemento ancestral mais próximo que tenha position relativa, 
+       absoluta ou fixa (neste caso, a .container). Fica sobreposto ao container. */
+    position: absolute;
+    bottom: 20px; /* Ajustado para ficar dentro dos limites visuais do container */
+    left: 5%;     /* Centralizado horizontalmente dentro do container de 90% de largura */
+}
+
+.fixed {
+    height: 80px;
+    background-color: aqua;
+    color: black; /* Ajustado para contraste com o fundo aqua */
+    width: 100%;
+    box-shadow: 0 0 10px #fff;
+    
+    /* POSITION FIXED: 
+       Retira o elemento do fluxo normal e o fixa em relação à janela do navegador (viewport). 
+       Ele não se move ao rolar a página (fica permanentemente visível no topo). */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Garante que fique por cima de todos os outros elementos ao rolar */
+}
+
+table {
+    margin-top: 120px;
+    width: 100%;
+    border: 1px solid white;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+table th,
+td {
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Adicionada borda sutil para melhor leitura */
+}
+
+table thead {
+    background-color: aquamarine;
+    color: black;
+    
+    /* POSITION STICKY: 
+       Comportamento híbrido. O elemento age como relativo até que o usuário 
+       atinja o ponto definido (top: 80px), momento em que ele "gruda" na tela 
+       enquanto a tabela estiver visível na rolagem. */
+    position: sticky;
+    top: 80px; /* Fica logo abaixo da barra fixa do topo (que tem 80px de altura) */
+    z-index: 10;
+}
+
+table tbody tr:nth-child(2n) {
+    background-color: rgba(0, 255, 255, 0.15); /* Tom suave alternado para melhor legibilidade */
+}

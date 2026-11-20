@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 1140px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    justify-content: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../imagens/ImagemFundo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.header {
+    width: 1140px;
+    height: 70px;
+    display: flex;
+    margin: auto;
+    margin-bottom: 15px;
+    background-color: rgb(228, 77, 38);
+
+}
+
+.logo img {
+    height: 100%;
+    margin: 0 0 0 5px;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.links {
+    display: flex;
+    list-style: none;
+
+}
+
+.links li {
+    padding: 5px;
+}
+
+.links li a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.login {
+    display: flex;
+    list-style: none;
+    margin: 0 15px;
+}
+
+.login li {
+    padding: 5px;
+}
+
+.login li a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+form {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(240, 248, 255, 0.269);
+    padding: 15px;
+    border-radius: 9px;
+}
+
+form h1 {
+    text-align: center;
+    padding: 15px;
+    font-size: 35px;
+}
+
+.email {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.senha {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.lembrar {
+    float: right;
+    margin-bottom: 20px;
+}
+
+label {
+    margin: 0 0 5px;
+}
+
+input {
+    padding: 7px;
+}
+
+button {
+    border: none;
+    padding: 10px;
+    color: azure;
+    background-color: cornflowerblue;
+    border-radius: 9px;
+    text-align: center;
+    font-weight: bold;
+    width: 45%;
+}

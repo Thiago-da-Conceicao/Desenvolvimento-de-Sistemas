@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    
+}
+
+h1 {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 24px;
+}
+
+h2 {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+p {
+    color: grey;
+    font-size: 15px
+}
+
+span {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-weight: bold;
+    color: black
+
+}
+
+.container {
+    background-color: #e8edf6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 35px;
+}
+
+.card {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    text-align: center;
+    width: 300px;
+    border: 1px;
+    border-radius: 13px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.306);
+    transition: box-shadow 0.3s;
+    transform: translateY 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px  rgba(0, 0, 0, 0.37)
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3182cec0;
+    color: white;
+    border: #007bff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 50%;
+    margin-block: 10px;
+}
+
+button:hover {
+    background-color: #007bff;
+}
+
+img {
+    width: 100%;
+    
+}
