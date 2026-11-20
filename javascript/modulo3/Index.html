@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: rgb(0, 119, 255);
+            color: aliceblue;
+            font-size: 18;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Iniciando os estudos de DOM</h1>
+        <p>Aqui vai os resultados</p>
+        <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+        <div id="msg">getElementById</div><br>
+        <div name="nome">getElementsByClassName</div><br>
+        <div class="classe">getElementsByClassName</div><br>
+        <div id="selector">querySelector</div>
+
+
+    </main>
+
+    <script>
+        //Cor de fundo
+        var corpo = window.document.body
+        corpo.style.background = 'black'
+
+        // Seleção por TAG PLURAL []
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write('<br>Aqui está escrito: ' + p1.innerHTML)
+        // inerText não pega a formatação && innerHTML puxa toda a formatação
+        p1.style.color = 'blue'
+
+        // Seleção por ID 
+        var id = window.document.getElementById('msg')
+        id.style.background = 'green'
+        id.innerText = 'Mudando o conteúdo'
+
+        // Seleção por Name PLURAL [] 
+        var na = window.document.getElementsByName('nome')[0]
+        na.innerText = 'Olá'
+        na.style.background = 'red'
+
+        // Seleção por class PLURAL []
+        var cl = window.document.getElementsByClassName('classe')[0]
+        cl.innerText = 'Aguarde...'
+        cl.style.background = 'blue'
+
+        // QuerySelector
+        var qs = window.document.querySelector('div#selector') // div id = div# && div class = div.
+        qs.innerText = 'Teste'
+        qs.style.background = 'paleturquoise'
+        qs.style.color = 'black'
+
+    </script>
+</body>
+
+</html>
