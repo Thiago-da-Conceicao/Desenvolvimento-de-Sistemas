@@ -145,7 +145,8 @@
         <h1>✌️ Par ou ímpar?</h1>
         <p class="enunciado">Um número é <strong>par</strong> quando o resto da divisão por 2 é zero, e
             <strong>ímpar</strong> caso contrário.
-            Receba um número e informe se ele é par ou ímpar.</p>
+            Receba um número e informe se ele é par ou ímpar.
+        </p>
 
         <label for="in-numero">Número</label>
         <input type="number" id="in-numero" placeholder="Digite um número">
@@ -170,14 +171,18 @@
         const elBotao = document.getElementById('btn-verificar');
 
         function verificar() {
+
             console.log(elNumero.value)
-           let resposta = Number(elNumero.value);
-            if ( resposta % 2 == 0) {
-            elResposta.innerHTML = resposta + " é par"
-               
+
+            // converte de string para number
+            let resposta = Number(elNumero.value);
+
+            if (resposta % 2 == 0) {
+
+                elResposta.innerHTML = resposta + " é par"
             }
             else {
-                elResposta.innerHTML = resposta +" é impar"
+                elResposta.innerHTML = resposta + " é impar"
             }
 
         }

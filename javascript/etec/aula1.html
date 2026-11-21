@@ -159,17 +159,18 @@
     const elBotao = document.getElementById('btn-verificar');
 
     function verificar() {
-        
-            console.log(elIdade.value)
 
-           let resposta = Number(elIdade.value);
-            if ( resposta >= 18) {
-            elResposta.innerHTML = resposta + " Aprovado 😎"
-               
-            }
-            else {
-                elResposta.innerHTML = resposta + " Negado 🔞"
-            }
+      console.log(elIdade.value)
+
+      // converte de string para number
+      let resposta = Number(elIdade.value);
+
+      if (resposta >= 18) {
+        elResposta.innerHTML = resposta + " Aprovado 😎"
+      }
+      else {
+        elResposta.innerHTML = resposta + " Negado 🔞"
+      }
 
     }
 

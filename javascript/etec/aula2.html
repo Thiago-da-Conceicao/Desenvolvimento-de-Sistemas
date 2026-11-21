@@ -178,8 +178,10 @@
       <ul>
         <li>Dica 1: pegue o número e converta → <code>Number(elNumero.value)</code>.</li>
         <li>Dica 2: <code>for (let i = 1; i &lt;= 10; i++)</code> de reforço de memória — idêntico ao C++.</li>
-        <li>Dica 3: a cada volta do laço, <code>elLista.innerHTML += `&lt;li&gt;${n} x ${i} = ${n * i}&lt;/li&gt;`</code>.</li>
-        <li>Dica 4 (importante!): <strong>antes do laço</strong>, <code>elLista.innerHTML = "";</code> para não acumular de clique em clique.</li>
+        <li>Dica 3: a cada volta do laço,
+          <code>elLista.innerHTML += `&lt;li&gt;${n} x ${i} = ${n * i}&lt;/li&gt;`</code>.</li>
+        <li>Dica 4 (importante!): <strong>antes do laço</strong>, <code>elLista.innerHTML = "";</code> para não acumular
+          de clique em clique.</li>
       </ul>
     </details>
   </main>
@@ -190,10 +192,13 @@
     const elBotao = document.getElementById('btn-gerar');
 
     function gerarTabuada() {
-let valor = Number (elNumero.value)
-for (let i = 1; i <= 10; i++){
-    elLista.innerHTML += `${i} x ${valor} = ${(i * valor)}<br>`
-}}
+      // converte de string para number
+      let valor = Number(elNumero.value)
+      
+      for (let i = 1; i <= 10; i++) {
+        elLista.innerHTML += `${i} x ${valor} = ${(i * valor)}<br>`
+      }
+    }
 
     elBotao.addEventListener('click', gerarTabuada);
   </script>

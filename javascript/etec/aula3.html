@@ -190,9 +190,21 @@
     const elFrase = document.getElementById('out-frase');
     const elBotao = document.getElementById('btn-lancar');
 
-    function gerarTabuada() {
-     
+    function lancarContagem() {
+      
+      // converte de string para number
+      let n = Number(elInicio.value);
 
+      // Limpa a informação para não ter erro
+      elLista.innerHTML = "";
+
+      // Enquanto n > 0 decompondo de 1 em um a cada repetição
+      while (n > 0) {
+        elLista.innerHTML += `<li>${n}</li>`;
+        n--;
+      }
+
+      elFrase.textContent = "Lançamento!";
     }
 
     elBotao.addEventListener('click', lancarContagem);
